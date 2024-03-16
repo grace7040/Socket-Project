@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DEFECTS>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\tpdms\source\repos\Socket_Project\08-tcp-echo-server-multithread-chat\</FILEPATH>
+      <FILENAME>08-tcp-echo-server-multithread-chat.cpp</FILENAME>
+      <LINE>57</LINE>
+      <COLUMN>25</COLUMN>
+    </SFA>
+    <DEFECTCODE>6386</DEFECTCODE>
+    <DESCRIPTION>'recvData'에 쓰는 동안 버퍼 오버런이 발생했습니다.  쓰기 가능한 크기는 '1024'바이트인데 실제로는 'length'바이트만 쓸 수 있습니다.</DESCRIPTION>
+    <FUNCTION>ServeForever</FUNCTION>
+    <DECORATED>?ServeForever@@YAXHIUsockaddr_in@@@Z</DECORATED>
+    <FUNCLINE>45</FUNCLINE>
+    <PROBABILITY>1</PROBABILITY>
+    <RANK>4</RANK>
+    <CATEGORY>
+      <RULECATEGORY>mspft</RULECATEGORY>
+    </CATEGORY>
+    <PATH>
+      <SFA>
+        <FILEPATH>C:\Users\tpdms\source\repos\Socket_Project\08-tcp-echo-server-multithread-chat\</FILEPATH>
+        <FILENAME>08-tcp-echo-server-multithread-chat.cpp</FILENAME>
+        <LINE>56</LINE>
+        <COLUMN>12</COLUMN>
+        <KEYEVENT>
+          <ID>1</ID>
+          <KIND>declaration</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>'length'은(는) 'recv'(c:\program files (x86)\windows kits\10\include\10.0.22621.0\um\winsock2.h:2008에서 선언됨)의 반환 값을 받습니다.</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\tpdms\source\repos\Socket_Project\08-tcp-echo-server-multithread-chat\</FILEPATH>
+        <FILENAME>08-tcp-echo-server-multithread-chat.cpp</FILENAME>
+        <LINE>46</LINE>
+        <COLUMN>9</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\tpdms\source\repos\Socket_Project\08-tcp-echo-server-multithread-chat\</FILEPATH>
+        <FILENAME>08-tcp-echo-server-multithread-chat.cpp</FILENAME>
+        <LINE>47</LINE>
+        <COLUMN>13</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\tpdms\source\repos\Socket_Project\08-tcp-echo-server-multithread-chat\</FILEPATH>
+        <FILENAME>08-tcp-echo-server-multithread-chat.cpp</FILENAME>
+        <LINE>49</LINE>
+        <COLUMN>65</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\tpdms\source\repos\Socket_Project\08-tcp-echo-server-multithread-chat\</FILEPATH>
+        <FILENAME>08-tcp-echo-server-multithread-chat.cpp</FILENAME>
+        <LINE>51</LINE>
+        <COLUMN>25</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\tpdms\source\repos\Socket_Project\08-tcp-echo-server-multithread-chat\</FILEPATH>
+        <FILENAME>08-tcp-echo-server-multithread-chat.cpp</FILENAME>
+        <LINE>54</LINE>
+        <COLUMN>9</COLUMN>
+        <KEYEVENT>
+          <ID>2</ID>
+          <KIND>declaration</KIND>
+          <IMPORTANCE>Essential</IMPORTANCE>
+          <MESSAGE>'recvData'이(가) 1024 요소의 배열입니다(1024바이트).</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\tpdms\source\repos\Socket_Project\08-tcp-echo-server-multithread-chat\</FILEPATH>
+        <FILENAME>08-tcp-echo-server-multithread-chat.cpp</FILENAME>
+        <LINE>55</LINE>
+        <COLUMN>11</COLUMN>
+        <KEYEVENT>
+          <ID>3</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>이 루프 시작, ('1' 가정)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\tpdms\source\repos\Socket_Project\08-tcp-echo-server-multithread-chat\</FILEPATH>
+        <FILENAME>08-tcp-echo-server-multithread-chat.cpp</FILENAME>
+        <LINE>56</LINE>
+        <COLUMN>12</COLUMN>
+        <KEYEVENT>
+          <ID>4</ID>
+          <KIND>declaration</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>'recvData'은(는) 'recv'(c:\program files (x86)\windows kits\10\include\10.0.22621.0\um\winsock2.h:2008에서 선언됨)의 출력입니다.</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\tpdms\source\repos\Socket_Project\08-tcp-echo-server-multithread-chat\</FILEPATH>
+        <FILENAME>08-tcp-echo-server-multithread-chat.cpp</FILENAME>
+        <LINE>57</LINE>
+        <COLUMN>25</COLUMN>
+        <KEYEVENT>
+          <ID>5</ID>
+          <KIND>usage</KIND>
+          <IMPORTANCE>Essential</IMPORTANCE>
+          <MESSAGE>'recvData[1024]'에 쓰기가 잘못됨, (쓰기 가능한 범위는 0에서 1023 사이임)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+    </PATH>
+  </DEFECT>
+</DEFECTS>

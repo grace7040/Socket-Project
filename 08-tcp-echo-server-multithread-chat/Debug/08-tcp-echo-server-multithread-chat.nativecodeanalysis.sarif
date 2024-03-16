@@ -1,0 +1,231 @@
+{
+  "version": "2.1.0",
+  "$schema": "https://schemastore.azurewebsites.net/schemas/json/sarif-2.1.0-rtm.5.json",
+  "runs": [
+    {
+      "results": [
+        {
+          "ruleId": "C6386",
+          "message": {
+            "text": "'recvData'에 쓰는 동안 버퍼 오버런이 발생했습니다.  쓰기 가능한 크기는 '1024'바이트인데 실제로는 'length'바이트만 쓸 수 있습니다."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/tpdms/source/repos/Socket_Project/08-tcp-echo-server-multithread-chat/08-tcp-echo-server-multithread-chat.cpp"
+                },
+                "region": {
+                  "startLine": 57,
+                  "startColumn": 9,
+                  "endLine": 57,
+                  "endColumn": 28
+                }
+              },
+              "logicalLocations": [
+                {
+                  "decoratedName": "?ServeForever@@YAXHIUsockaddr_in@@@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/tpdms/source/repos/Socket_Project/08-tcp-echo-server-multithread-chat/08-tcp-echo-server-multithread-chat.cpp"
+                          },
+                          "region": {
+                            "startLine": 56,
+                            "startColumn": 13
+                          }
+                        },
+                        "message": {
+                          "text": "'length'은(는) 'recv'(c:\\program files (x86)\\windows kits\\10\\include\\10.0.22621.0\\um\\winsock2.h:2008에서 선언됨)의 반환 값을 받습니다."
+                        }
+                      },
+                      "kinds": [
+                        "declaration"
+                      ],
+                      "importance": "important"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/tpdms/source/repos/Socket_Project/08-tcp-echo-server-multithread-chat/08-tcp-echo-server-multithread-chat.cpp"
+                          },
+                          "region": {
+                            "startLine": 46,
+                            "startColumn": 10
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/tpdms/source/repos/Socket_Project/08-tcp-echo-server-multithread-chat/08-tcp-echo-server-multithread-chat.cpp"
+                          },
+                          "region": {
+                            "startLine": 47,
+                            "startColumn": 14
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/tpdms/source/repos/Socket_Project/08-tcp-echo-server-multithread-chat/08-tcp-echo-server-multithread-chat.cpp"
+                          },
+                          "region": {
+                            "startLine": 49,
+                            "startColumn": 66
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/tpdms/source/repos/Socket_Project/08-tcp-echo-server-multithread-chat/08-tcp-echo-server-multithread-chat.cpp"
+                          },
+                          "region": {
+                            "startLine": 51,
+                            "startColumn": 26
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/tpdms/source/repos/Socket_Project/08-tcp-echo-server-multithread-chat/08-tcp-echo-server-multithread-chat.cpp"
+                          },
+                          "region": {
+                            "startLine": 54,
+                            "startColumn": 10
+                          }
+                        },
+                        "message": {
+                          "text": "'recvData'이(가) 1024 요소의 배열입니다(1024바이트)."
+                        }
+                      },
+                      "kinds": [
+                        "declaration"
+                      ],
+                      "importance": "essential"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/tpdms/source/repos/Socket_Project/08-tcp-echo-server-multithread-chat/08-tcp-echo-server-multithread-chat.cpp"
+                          },
+                          "region": {
+                            "startLine": 55,
+                            "startColumn": 12
+                          }
+                        },
+                        "message": {
+                          "text": "이 루프 시작, ('1' 가정)"
+                        }
+                      },
+                      "kinds": [
+                        "branch"
+                      ],
+                      "importance": "important"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/tpdms/source/repos/Socket_Project/08-tcp-echo-server-multithread-chat/08-tcp-echo-server-multithread-chat.cpp"
+                          },
+                          "region": {
+                            "startLine": 56,
+                            "startColumn": 13
+                          }
+                        },
+                        "message": {
+                          "text": "'recvData'은(는) 'recv'(c:\\program files (x86)\\windows kits\\10\\include\\10.0.22621.0\\um\\winsock2.h:2008에서 선언됨)의 출력입니다."
+                        }
+                      },
+                      "kinds": [
+                        "declaration"
+                      ],
+                      "importance": "important"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/tpdms/source/repos/Socket_Project/08-tcp-echo-server-multithread-chat/08-tcp-echo-server-multithread-chat.cpp"
+                          },
+                          "region": {
+                            "startLine": 57,
+                            "startColumn": 26
+                          }
+                        },
+                        "message": {
+                          "text": "'recvData[1024]'에 쓰기가 잘못됨, (쓰기 가능한 범위는 0에서 1023 사이임)"
+                        }
+                      },
+                      "kinds": [
+                        "usage"
+                      ],
+                      "importance": "essential"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "tool": {
+        "driver": {
+          "name": "PREfast",
+          "fullName": "PREfast Code Analysis",
+          "version": "14.29.30148.0",
+          "informationUri": "https://aka.ms/cpp/ca"
+        }
+      },
+      "invocations": [
+        {
+          "commandLine": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX86\\x86\\c1xx.dll\" -ACf{1F7B090C-16DB-4822-966A-A93D26ED4681} -ACpmspft140.dll -Alint -D_PREFAST_ -D_AST_FE_ -Analyze -zm0x0020D1C0 -il C:\\Users\\tpdms\\AppData\\Local\\Temp\\_CL_faeaa55east -typedil -f 08-tcp-echo-server-multithread-chat.cpp -Ze -D_MSC_EXTENSIONS -Zp8 -Gs -pc \\:/ -D_MSC_VER=1929 -D_MSC_FULL_VER=192930148 -D_MSC_BUILD=0 -D_WIN32 -D_M_IX86=600 -D_M_IX86_FP=2 -GR -D_CPPRTTI -nologo -W 3 -diagnostics:column -D_GUARDOVERFLOW_CRT_ALLOCATORS=1 -Ot -DCODE_ANALYSIS -DWIN32 -D_DEBUG -D_CONSOLE -D_UNICODE -DUNICODE -EHs -D_CPPUNWIND -EHc -D__MSVC_RUNTIME_CHECKS -RTCs -RTCu -MDd -D_DEBUG -D_MT -D_DLL -GS -D_M_FP_PRECISE -permissive- -Zc:wchar_t -Zc:forScope -FoDebug\\08-tcp-echo-server-multithread-chat.obj -FdDebug\\vc142.pdb -external:W 3 -Gd -analyze:projectdirectory C:\\Users\\tpdms\\source\\repos\\Socket_Project\\08-tcp-echo-server-multithread-chat -analyze:rulesetdirectory ;C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\Team Tools\\Static Analysis Tools\\\\Rule Sets; -analyze:ruleset C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\Team Tools\\Static Analysis Tools\\Rule Sets\\NativeRecommendedRules.ruleset -analyze:quiet -analyze:plugin C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX86\\x86\\EspXEngine.dll -FC -errorreport:prompt -I C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\include -I C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\atlmfc\\include -I C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Auxiliary\\VS\\include -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.22621.0\\ucrt -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.22621.0\\um -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.22621.0\\shared -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.22621.0\\winrt -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.22621.0\\cppwinrt -I C:\\Program Files (x86)\\Windows Kits\\NETFXSDK\\4.8\\Include\\um -external:I C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\include -I C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\include -external:I C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\atlmfc\\include -I C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\atlmfc\\include -external:I C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Auxiliary\\VS\\include -I C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Auxiliary\\VS\\include -external:I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.22621.0\\ucrt -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.22621.0\\ucrt -external:I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.22621.0\\um -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.22621.0\\um -external:I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.22621.0\\shared -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.22621.0\\shared -external:I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.22621.0\\winrt -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.22621.0\\winrt -external:I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.22621.0\\cppwinrt -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.22621.0\\cppwinrt -external:I C:\\Program Files (x86)\\Windows Kits\\NETFXSDK\\4.8\\Include\\um -I C:\\Program Files (x86)\\Windows Kits\\NETFXSDK\\4.8\\Include\\um",
+          "executionSuccessful": true
+        }
+      ],
+      "artifacts": [
+        {
+          "location": {
+            "uri": "file:///C:/Users/tpdms/source/repos/Socket_Project/08-tcp-echo-server-multithread-chat/08-tcp-echo-server-multithread-chat.cpp"
+          },
+          "roles": [
+            "analysisTarget",
+            "resultFile"
+          ],
+          "hashes": {
+            "md5": "b69eea718420a0256ade85e90087cb85"
+          }
+        }
+      ]
+    }
+  ]
+}
